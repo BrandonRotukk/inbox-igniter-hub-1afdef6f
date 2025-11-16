@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
+import { Header } from "@/components/Header";
 import { 
   Mail, 
   Zap, 
@@ -95,8 +96,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
+      <Header />
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
