@@ -7,7 +7,9 @@ export const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-1">
-            <img src={logo} alt="Fusion Outreach Hub" className="h-10 w-10" />
+            <a href={logo} download="fusion-outreach-hub-logo.png" className="cursor-pointer">
+              <img src={logo} alt="Fusion Outreach Hub" className="h-10 w-10 hover:opacity-80 transition-opacity" />
+            </a>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Fusion Outreach Hub
             </span>
