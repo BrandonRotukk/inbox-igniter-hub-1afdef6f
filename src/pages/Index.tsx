@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Header } from "@/components/Header";
+import { ContactForm } from "@/components/ContactForm";
 import { 
   Mail, 
   Zap, 
@@ -195,28 +196,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-primary rounded-3xl p-12 lg:p-16 text-center shadow-strong">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              Let's Work Together
-            </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-              Ready to fix deliverability, generate verified leads, and automate outreach?
-              We build tailored systems that maximize inbox placement and campaign results.
-            </p>
-            <Button 
-              variant="hero-outline" 
-              size="lg" 
-              className="text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              onClick={() => window.location.href = 'mailto:brandon@flowfusionhub.space'}
-            >
-              Contact Us Today
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Contact Form */}
+      <ContactForm />
 
       {/* Footer */}
       <footer className="border-t border-border/50 bg-card/30 backdrop-blur-sm py-12">
