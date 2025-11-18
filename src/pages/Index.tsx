@@ -116,7 +116,7 @@ const Index = () => {
                 We specialize in fixing email deliverability issues and building fully authenticated sending infrastructures that land in the inbox. Whether you're running newsletters or cold outreach, we make sure your entire email environment is correctly set up, compliant, and optimized for performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="text-lg" onClick={() => window.location.href = 'mailto:brandon@flowfusionhub.space'}>
+                <Button variant="hero" size="lg" className="text-lg" onClick={() => window.location.href = 'mailto:brannyk001@gmail.com'}>
                   Get Started
                 </Button>
                 <Button variant="hero-outline" size="lg" className="text-lg">
@@ -210,10 +210,10 @@ const Index = () => {
             <div className="flex items-center justify-center gap-2 text-muted-foreground">
               <Mail className="w-5 h-5" />
               <a 
-                href="mailto:brandon@flowfusionhub.space" 
+                href="mailto:brannyk001@gmail.com" 
                 className="hover:text-accent transition-colors"
               >
-                brandon@flowfusionhub.space
+                brannyk001@gmail.com
               </a>
             </div>
             <p className="text-sm text-muted-foreground pt-4">
