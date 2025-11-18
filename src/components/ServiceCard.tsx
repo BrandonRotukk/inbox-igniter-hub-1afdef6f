@@ -1,16 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { LucideIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
   features: string[];
+  serviceKey?: string;
 }
 
-export const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardProps) => {
-  return (
-    <Card className="hover:shadow-medium transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm hover:-translate-y-1">
+export const ServiceCard = ({ icon: Icon, title, description, features, serviceKey }: ServiceCardProps) => {
+  const card = (
+    <Card className="hover:shadow-medium transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm hover:-translate-y-1 h-full cursor-pointer">
       <CardHeader>
         <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4">
           <Icon className="w-6 h-6 text-primary-foreground" />
@@ -30,4 +32,10 @@ export const ServiceCard = ({ icon: Icon, title, description, features }: Servic
       </CardContent>
     </Card>
   );
+
+  if (serviceKey) {
+    return <Link to={`/services?service=${serviceKey}`}>{card}</Link>;
+  }
+
+  return card;
 };
