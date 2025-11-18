@@ -210,10 +210,10 @@ const Index = () => {
             <div className="flex items-center justify-center gap-2 text-muted-foreground">
               <Mail className="w-5 h-5" />
               <a 
-                href="mailto:brandon@flowfusionhub.space" 
+                href="mailto:brannyk001@gmail.com" 
                 className="hover:text-accent transition-colors"
               >
-                brandon@flowfusionhub.space
+                brannyk001@gmail.com
               </a>
             </div>
             <p className="text-sm text-muted-foreground pt-4">
