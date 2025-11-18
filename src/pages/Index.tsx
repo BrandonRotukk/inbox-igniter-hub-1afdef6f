@@ -18,7 +18,6 @@ import heroImage from "@/assets/hero-email.jpg";
 const Index = () => {
   const services = [
     {
-      key: "deliverability",
       icon: Shield,
       title: "Email Deliverability",
       description: "Ensure your emails reach the inbox.",
@@ -32,7 +31,6 @@ const Index = () => {
       ]
     },
     {
-      key: "marketing",
       icon: Zap,
       title: "Email Marketing & Automation",
       description: "Engage your audience and nurture leads automatically.",
@@ -46,7 +44,6 @@ const Index = () => {
       ]
     },
     {
-      key: "coldemail",
       icon: Settings,
       title: "Cold Email System Setup",
       description: "A complete ready-to-launch outbound engine.",
@@ -60,7 +57,6 @@ const Index = () => {
       ]
     },
     {
-      key: "leadgen",
       icon: Target,
       title: "B2B Lead Generation",
       description: "Get accurate, verified leads aligned to your ideal customer profile.",
@@ -72,7 +68,6 @@ const Index = () => {
       ]
     },
     {
-      key: "cleaning",
       icon: CheckCircle2,
       title: "Lead Cleaning & Verification",
       description: "Protect your deliverability with clean, verified lists.",
@@ -86,7 +81,6 @@ const Index = () => {
       ]
     },
     {
-      key: "management",
       icon: RefreshCw,
       title: "Ongoing Management",
       description: "Hands-off support for continuous outreach success.",
@@ -167,7 +161,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 lg:py-32">
+      <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">Our Services</h2>
@@ -177,7 +171,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} serviceKey={service.key} />
+              <ServiceCard key={index} {...service} />
             ))}
           </div>
         </div>
@@ -203,9 +197,7 @@ const Index = () => {
       </section>
 
       {/* Contact Form */}
-      <section id="contact">
-        <ContactForm />
-      </section>
+      <ContactForm />
 
       {/* Footer */}
       <footer className="border-t border-border/50 bg-card/30 backdrop-blur-sm py-12">
