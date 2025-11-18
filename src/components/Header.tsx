@@ -1,5 +1,6 @@
 import logo from "@/assets/logo.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { NavLink } from "@/components/NavLink";
 
 export const Header = () => {
   return (
@@ -14,6 +15,11 @@ export const Header = () => {
               Fusion Outreach Hub
             </span>
           </div>
+          <nav className="hidden md:flex items-center gap-8">
+            <NavLink to="/" className="text-foreground/80 hover:text-foreground transition-colors">Home</NavLink>
+            <NavLink to="/#services" className="text-foreground/80 hover:text-foreground transition-colors">Services</NavLink>
+            <NavLink to="/#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</NavLink>
+          </nav>
           <ThemeToggle />
         </div>
       </div>
