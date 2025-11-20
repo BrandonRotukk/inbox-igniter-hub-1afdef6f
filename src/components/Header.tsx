@@ -1,11 +1,17 @@
 import logo from "@/assets/logo.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from "react";
 
 export const Header = () => {
+  const [open, setOpen] = useState(false);
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setOpen(false);
     }
   };
 
@@ -50,8 +56,46 @@ export const Header = () => {
             <ThemeToggle />
           </nav>
           
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <button className="p-2 text-foreground/80 hover:text-primary transition-colors">
+                  <Menu className="h-6 w-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[250px]">
+                <nav className="flex flex-col gap-6 mt-8">
+                  <button 
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                      setOpen(false);
+                    }}
+                    className="text-foreground/80 hover:text-primary transition-colors font-medium text-left"
+                  >
+                    Home
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('services')}
+                    className="text-foreground/80 hover:text-primary transition-colors font-medium text-left"
+                  >
+                    Services
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('faq')}
+                    className="text-foreground/80 hover:text-primary transition-colors font-medium text-left"
+                  >
+                    FAQ
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="text-foreground/80 hover:text-primary transition-colors font-medium text-left"
+                  >
+                    Contact
+                  </button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
