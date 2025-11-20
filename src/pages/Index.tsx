@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Header } from "@/components/Header";
 import { ContactForm } from "@/components/ContactForm";
+import { Testimonials } from "@/components/Testimonials";
 import { 
   Mail, 
   Zap, 
@@ -195,6 +196,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Contact Form */}
       <ContactForm />
