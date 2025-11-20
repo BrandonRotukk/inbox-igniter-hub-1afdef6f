@@ -3,6 +3,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { Header } from "@/components/Header";
 import { ContactForm } from "@/components/ContactForm";
 import { Testimonials } from "@/components/Testimonials";
+import { FAQ } from "@/components/FAQ";
 import { 
   Mail, 
   Zap, 
@@ -199,6 +200,9 @@ const Index = () => {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* Contact Form */}
       <ContactForm />
